@@ -1,0 +1,13 @@
+{
+  "name": "turja-skills",
+  "owner": {
+    "name": "Simanta Deb Turja"
+  },
+  "plugins": [
+    {
+      "name": "turja-skills",
+      "source": "./",
+      "description": "Personal Claude Code plugin — productivity skills (ticket refining/splitting, teaching) and agents (Spring Boot test auditor)."
+    }
+  ]
+}

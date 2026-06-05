@@ -2,6 +2,23 @@
 
 Personal Claude Code plugin — custom skills and agents for use in Claude Code sessions.
 
+## Installation
+
+In Claude Code, add this repo as a plugin marketplace and install the plugin:
+
+```
+/plugin marketplace add simantaturja/skills
+/plugin install turja-skills@turja-skills
+```
+
+To update later:
+
+```
+/plugin marketplace update turja-skills
+```
+
+Once installed, skills are invokable as `/turja-skills:<skill-name>` (e.g. `/turja-skills:ticket-refiner`) and agents are available to the Agent tool automatically.
+
 ## Structure
 
 ```
@@ -16,8 +33,9 @@ agents/
   in-progress/   # drafts (must NOT be in plugin.json)
   deprecated/    # retired agents
 .claude-plugin/
-  plugin.json    # skill + agent registry
-.mcp.json        # MCP server config
+  plugin.json      # skill + agent registry
+  marketplace.json # marketplace manifest (lets others install via /plugin)
+.mcp.json          # MCP server config
 ```
 
 ## Skills
