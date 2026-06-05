@@ -6,7 +6,8 @@ Personal Claude Code plugin — custom skills for use in Claude Code sessions.
 
 ```
 skills/
-  live/          # ready skills (must be in plugin.json)
+  live/          # ready skills, grouped by category (must be in plugin.json)
+    productivity/
   in-progress/   # drafts (must NOT be in plugin.json)
   deprecated/    # retired skills
 .claude-plugin/
@@ -21,6 +22,8 @@ skills/
 | Skill | Description |
 |-------|-------------|
 | `turja-skills:ticket-refiner` | Refine a vague Jira/ClickUp ticket — interviews user, rewrites with title, problem, scope, and acceptance criteria |
+| `turja-skills:ticket-splitter` | Split a large Jira/ClickUp ticket into smaller, independently reviewable sub-tasks with clear scope and acceptance criteria |
+| `turja-skills:teach-me-crazy` | Teacher persona — explains concepts clearly with engaging analogies |
 
 ### In Progress
 
@@ -39,7 +42,7 @@ skills/
 
 | Server | Purpose |
 |--------|---------|
-| ClickUp | Ticket read/write for `ticket-refiner` |
+| ClickUp | Ticket read/write for `ticket-refiner` and `ticket-splitter` |
 
 ## Usage
 
