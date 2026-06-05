@@ -4,5 +4,6 @@
     "./skills/live/productivity/ticket-refiner",
     "./skills/live/productivity/ticket-splitter",
     "./skills/live/productivity/teach-me-crazy"
-  ]
+  ],
+  "agents": ["./agents/live/backend/test-auditor-java.md"]
 }

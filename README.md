@@ -1,6 +1,6 @@
 # skills
 
-Personal Claude Code plugin — custom skills for use in Claude Code sessions.
+Personal Claude Code plugin — custom skills and agents for use in Claude Code sessions.
 
 ## Structure
 
@@ -10,8 +10,13 @@ skills/
     productivity/
   in-progress/   # drafts (must NOT be in plugin.json)
   deprecated/    # retired skills
+agents/
+  live/          # ready agents, grouped by category (must be in plugin.json)
+    backend/
+  in-progress/   # drafts (must NOT be in plugin.json)
+  deprecated/    # retired agents
 .claude-plugin/
-  plugin.json    # skill registry
+  plugin.json    # skill + agent registry
 .mcp.json        # MCP server config
 ```
 
@@ -31,12 +36,27 @@ skills/
 |-------|-------------|
 | `code-review` | Code review skill (WIP) |
 
+## Agents
+
+### Live
+
+| Agent | Description |
+|-------|-------------|
+| `turja-skills:Test Auditor — Java Spring Boot` | Read-only audit of test coverage, test quality, and architecture for a Spring Boot service — prioritized report of missing/weak tests ranked by production risk |
+
 ## Adding a Skill
 
 1. Create `skills/in-progress/<name>/SKILL.md` with frontmatter (`name`, `description`) and instructions.
 2. Test until ready.
 3. Move to `skills/live/<category>/<name>/`.
 4. Add entry to `.claude-plugin/plugin.json`.
+
+## Adding an Agent
+
+1. Create `agents/in-progress/<name>.md` with frontmatter (`name`, `description`) and instructions.
+2. Test until ready.
+3. Move to `agents/live/<category>/<name>.md`.
+4. Add entry to the `agents` array in `.claude-plugin/plugin.json`.
 
 ## MCP Servers
 
@@ -46,4 +66,4 @@ skills/
 
 ## Usage
 
-Open any project in Claude Code. Skills registered in `plugin.json` are available automatically via the `turja-skills:` namespace.
+Open any project in Claude Code. Skills and agents registered in `plugin.json` are available automatically via the `turja-skills:` namespace.
