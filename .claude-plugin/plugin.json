@@ -2,6 +2,7 @@
   "name": "turja-skills",
   "skills": [
     "./skills/live/productivity/ticket-refiner",
-    "./skills/live/productivity/ticket-splitter"
+    "./skills/live/productivity/ticket-splitter",
+    "./skills/live/productivity/teach-me-crazy"
   ]
 }
